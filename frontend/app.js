@@ -1,4 +1,4 @@
-const baseUrl = 'http://localhost:8000';
+const baseUrl = 'https://stingray-app-2qrpv.ondigitalocean.app';
 
 async function fetchFirstPosts() {
     const user = JSON.parse(localStorage.getItem('user'));
