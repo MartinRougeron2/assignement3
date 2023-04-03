@@ -1,0 +1,60 @@
+<!-- Admin view -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+    <header class="bg-gray-200 p-4 flex justify-between items-center">
+        <nav class="flex justify-between items-center">
+            <ul class="flex justify-between items-center">
+                <li class="p-4"><a href="#/">Home</a></li>
+                <li class="p-4"><a href="#">All Posts</a></li>
+                <li class="p-4"><a href="#/login">Login</a></li>
+                <li class="p-4"><a href="#/register">Register</a></li>
+                <li class="p-4"><a href="#/logout" onclick="localStorage.removeItem('token');">Logout</a></li>
+                <li class="p-4"><a href="#/admin">Admin</a></li>
+                <li class="p-4" onclick="logout()"><a>Logout</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main class="bg-gray-100 p-4">
+        <h1 class="text-2xl">Admin</h1>
+        <h2 class="text-xl">Posts</h2>
+        <section class="posts">
+            <!-- Display all blog posts from the API -->
+        </section>
+        <h2 class="text-xl">Users</h2>
+        <section class="users">
+            <!-- Display all users from the API -->
+        </section>
+        <!-- create a new user -->
+        <section class="register bg-white p-4">
+            Create User as Admin
+            <div class="flex flex-col">
+                <label for="uc-email" class="mt-4">Email</label>
+                <input type="email" name="email" id="uc-email" class="border border-gray-400 p-2">
+                <label for="uc-name">Username</label>
+                <input type="text" name="name" id="uc-name" class="border border-gray-400 p-2">
+                <label for="uc-password">Password</label>
+                <input type="password" name="password" id="uc-password" class="border border-gray-400 p-2">
+                <label for="uc-isAdmin">
+                    Is Admin?
+                </label>
+                <input type="checkbox" name="admin" id="uc-isAdmin" class="border border-gray-400 p-2" />
+                <button onclick="createUserAdmin()" class="bg-blue-500 text-white p-2 mt-4">Create User</button>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; Martin's Blog</p>
+    </footer>
+    <script src="app.js"></script>
+    <script src="admin.js"></script>
+</body>
+</html>
