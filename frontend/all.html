@@ -1,11 +1,12 @@
-<!-- Login Form -->
+<!-- Admin view -->
 
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login</title>
+    <title>Admin</title>
+    <link rel="stylesheet" href="style.css">
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body>
@@ -22,20 +23,15 @@
         </nav>
     </header>
     <main class="bg-gray-100 p-4">
-            <section class="register bg-white p-4">
-            <div class="flex flex-col">
-                <label for="email" class="mt-4">Email</label>
-                <input type="email" name="email" id="email" class="border border-gray-400 p-2">
-                <label for="password">Password</label>
-                <input type="password" name="password" id="password" class="border border-gray-400 p-2">
-                <button onclick="login()" class="bg-blue-500 text-white p-2 mt-4">Login</button>
-            </div>
+        <h2 class="text-xl">Posts</h2>
+        <section class="posts">
+            <!-- Display all blog posts from the API -->
         </section>
     </main>
     <footer>
         <p>&copy; Martin's Blog</p>
     </footer>
-    <script src="app.js">
-    </script>
+    <script src="app.js"></script>
+    <script src="all.js"></script>
 </body>
 </html>

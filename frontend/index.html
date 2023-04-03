@@ -41,10 +41,11 @@
         <nav class="flex justify-between items-center">
             <ul class="flex justify-between items-center">
                 <li class="p-4"><a href="/">Home</a></li>
+                <li class="p-4"><a href="/all">All Posts</a></li>
                 <li class="p-4"><a href="/login">Login</a></li>
                 <li class="p-4"><a href="/register">Register</a></li>
-                <li class="p-4"><a href="/logout" onclick="logout()">Logout</a></li>
                 <li class="p-4"><a href="/admin">Admin</a></li>
+                <li class="p-4"><a href="/login" onclick="localStorage.removeItem('token');">Logout</a></li>
             </ul>
         </nav>
     </header>

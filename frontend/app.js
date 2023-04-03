@@ -340,6 +340,7 @@ function createPost() {
     })
         .then(response => response.json())
         .then(data => {
+            fetchFirstPosts();
             if (data.error) {
                 alert(data.error);
             }
